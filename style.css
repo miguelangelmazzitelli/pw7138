@@ -6,6 +6,8 @@
 body{
     margin: 0 auto;
     font-family: "DIN1451";
+    position: relative;
+    
 }
 
 .banner { /* es una clase por eso se declara con punto; si es un ID se declara con # */
@@ -83,18 +85,24 @@ body{
 .grupo-1 .redes{
     display: inline-block;
     text-emphasis: none;
-    position: relative;
+    
+}
+
+.redes{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
 }
 
 .grupo-2 {
-    width: 100%;
-    background-color: black;
     padding: 15px 10px;
     text-align: center;
-    color: #FDD100;
-    position: absolute;
+    color: black;
     bottom: 0;
-    z-index: 1;
+    position: absolute;
+    width: 100%
 }
 
 .grupo-2 small{
