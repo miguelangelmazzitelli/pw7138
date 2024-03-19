@@ -1,14 +1,14 @@
-body{
-    margin: 0 auto;
-    font-family: "DIN1451";
-}
-
 @font-face {
     font-family: "DIN1451";
     src: url(./fonts/din1451.ttf) format(.ttf)
 }
 
-.banner {
+body{
+    margin: 0 auto;
+    font-family: "DIN1451";
+}
+
+.banner { /* es una clase por eso se declara con punto; si es un ID se declara con # */
     background-color: #fff;
     padding: 1px;
 }
