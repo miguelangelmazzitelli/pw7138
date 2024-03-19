@@ -1,6 +1,6 @@
 @font-face {
     font-family: "DIN1451";
-    src: url(./fonts/din1451.ttf) format(.ttf)
+    src: url(./fonts/din1451.ttf)
 }
 
 body{
@@ -9,13 +9,15 @@ body{
 }
 
 .banner { /* es una clase por eso se declara con punto; si es un ID se declara con # */
+    
     background-color: #fff;
     padding: 1px;
 }
 .navbar{
-    widht: 85%;
+    position: relative;
+    width: 85%;
     margin: auto;
-    padding: 10px 0;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,7 +32,8 @@ body{
     font-size: larger;
     list-style: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 20px;
+    margin-left: 1px;
 }
 .navbar ul li a{
     text-decoration: none;
@@ -38,17 +41,62 @@ body{
     text-transform: uppercase
 }
 .portada {
-    position: relative; /* Establece el posicionamiento relativo para poder posicionar la imagen dentro de él */
+    position: relative;
     width: 100%; /* Ajusta el ancho de la portada al 100% */
     height: 600px; /* Cambia la altura según sea necesario */
     overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
 }
 
 .img-portada {
-    position: absolute; /* Establece el posicionamiento absoluto para la imagen */
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
-    top: 50%; /* Lo posiciona en la mitad superior del contenedor */
-    transform: translateY(-50%); /* Lo ajusta hacia arriba para centrarlo verticalmente */
-    object-fit: cover; /* Corta la imagen para llenar el contenedor */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer{
+    background-color: #fff;
+    width: 100%;
+}
+
+.grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 150px;
+    padding: 10px 0;
+    z-index: 2;
+}
+
+.box figure{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.box figure img{
+    width: 178.83px;
+}
+
+.grupo-1 .redes{
+    display: inline-block;
+    text-emphasis: none;
+    position: relative;
+}
+
+.grupo-2 {
+    width: 100%;
+    background-color: black;
+    padding: 15px 10px;
+    text-align: center;
+    color: #FDD100;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.grupo-2 small{
+    font-size: 15px;
 }
