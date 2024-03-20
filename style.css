@@ -10,6 +10,12 @@ body{
     
 }
 
+.separador {
+    border: none;
+    border-top: 1.5px solid #ccc;
+    margin: 0;
+}
+
 .banner { /* es una clase por eso se declara con punto; si es un ID se declara con # */
     
     background-color: #fff;
@@ -45,7 +51,7 @@ body{
 .portada {
     position: relative;
     width: 100%; /* Ajusta el ancho de la portada al 100% */
-    height: 600px; /* Cambia la altura según sea necesario */
+    height: 700px; /* Cambia la altura según sea necesario */
     overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
 }
 
@@ -53,6 +59,34 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.contenedor{
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    grid: 20px;
+}
+
+.contenedor-productos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.card{
+    border-radius: 10px;
+    min-height: 300px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    width: 25%;
 }
 
 .footer{
