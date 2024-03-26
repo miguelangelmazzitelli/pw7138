@@ -74,7 +74,7 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 40px;
 }
 
 .card{
@@ -99,8 +99,8 @@ body{
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 150px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 200px;
     padding: 10px 0;
     z-index: 2;
 }
@@ -108,7 +108,7 @@ body{
 .box figure{
     width: 100%;
     height: 100%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -119,7 +119,6 @@ body{
 .grupo-1 .redes{
     display: inline-block;
     text-emphasis: none;
-    
 }
 
 .redes a{
@@ -127,7 +126,7 @@ body{
     width: 45px;
     height: 45px;
     line-height: 45px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .grupo-2 {
