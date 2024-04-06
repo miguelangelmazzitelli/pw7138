@@ -3,6 +3,10 @@
     src: url(./fonts/din1451.ttf)
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0 auto;
     font-family: "DIN1451";
