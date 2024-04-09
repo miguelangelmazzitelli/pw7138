@@ -1,17 +1,16 @@
 @font-face {
     font-family: "DIN1451";
-    src: url(./fonts/din1451.ttf)
+    src: url(./fonts/din1451.ttf);
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-    margin: 0 auto;
+body {
+    margin: 0;
     font-family: "DIN1451";
     position: relative;
-    
 }
 
 .separador {
@@ -20,68 +19,77 @@ body{
     margin: 0;
 }
 
-.banner { /* es una clase por eso se declara con punto; si es un ID se declara con # */
-    
+.banner {
     background-color: #fff;
     padding: 1px;
 }
-.navbar{
+
+.navbar {
     position: relative;
-    width: 85%;
+    width: 90%;
     margin: auto;
-    padding: 5px;
+    padding: 10px 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
-.logo{
+
+.logo {
     width: 120px;
-    margin-right: 5%;
+    margin-right: 20px;
     cursor: pointer;   
 }
-.navbar ul li{
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
     font-family: "DIN1451";
     font-size: larger;
-    list-style: none;
-    display: inline-block;
-    margin: 20px;
-    margin-left: 1px;
+    margin: 10px;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: #000;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
+
 .portada {
-    position: relative;
-    width: 100%; /* Ajusta el ancho de la portada al 100% */
-    height: 700px; /* Cambia la altura según sea necesario */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .img-portada {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-.contenedor{
+.contenedor {
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
     max-width: 1200px;
     margin: auto;
     padding: 40px 0;
-    grid: 20px;
 }
 
-.contenedor-productos{
+.contenedor-productos {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
 }
 
-.card{
+.card {
     border-radius: 10px;
     min-height: 300px;
     font-weight: bold;
@@ -90,47 +98,59 @@ body{
     overflow: hidden;
     background-size: cover;
     background-position: center center;
-    width: 25%;
-}
-
-.footer{
-    background-color: #fff;
     width: 100%;
 }
 
-.grupo-1{
+.footer {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.grupo-1 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 200px;
+    align-items: center;
+    grid-gap: 20px;
     padding: 10px 0;
     z-index: 2;
 }
 
-.box figure{
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
+.box{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: -3%;
 }
 
-.box figure img{
-    width: 178.83px;
+.box h2{
+    font-size: 17px;
+    margin-top: 2%;
 }
 
-.grupo-1 .redes{
-    display: inline-block;
-    text-emphasis: none;
+.box img {
+    display:flex;
+    justify-content: center;
+    width: 100px;
+    margin-right: 10px;
 }
 
-.redes a{
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    margin-right: 5px;
+.grupo-1 .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.redes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
 }
 
 .grupo-2 {
@@ -138,11 +158,28 @@ body{
     text-align: center;
     color: black;
     bottom: 0;
-    position: absolute;
-    width: 100%
+    width: 100%;
 }
 
-.grupo-2 small{
+.grupo-2 small {
     font-size: 10px;
+}
+
+.navbar ul li {
+    margin: 5px;
+}
+
+.logo {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.card {
+    width: 100%;
+}
+
+.grupo-1 {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
 }
 
