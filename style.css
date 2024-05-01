@@ -25,19 +25,18 @@ body {
 }
 
 .navbar {
-    position: relative;
     width: 90%;
     margin: auto;
     padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: normal;
 }
 
 .logo {
     width: 120px;
-    margin-right: 20px;
+    margin-right: 1000px;
     cursor: pointer;   
 }
 
@@ -176,3 +175,33 @@ body {
     grid-gap: 10px;
 }
 
+.carrito {
+    position: fixed;
+    top: 5px; /* Ajusta la distancia desde la parte inferior */
+    margin: auto;
+    right: 20px; /* Ajusta la distancia desde el lado derecho */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+.carrito span{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 62%;
+    left: -2px;
+
+}
+
+.img-carrito {
+    width: 100px;
+    height: 100px;
+    
+}
