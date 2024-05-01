@@ -10,9 +10,9 @@
     <title>Carrito de compras</title>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="showCart">
     <div class="carrito">
-    <a class="boton-carrito" href="./carrito.html"><img src="./images/carrito.svg" class="img-carrito"></a> 
+    <a class="boton-carrito" href=""><img src="./images/carrito.svg" class="img-carrito"></a> 
     <span>0</span>
     </div>
     <header>
@@ -24,7 +24,6 @@
                 <li><a href="#footer">Contacto</a></li>
                 <li><a href="#">Quienes Somos</a></li>
             </ul>
-            
         </div>
     </div>
     <hr class="separador">
@@ -62,6 +61,31 @@
               <a href="#" class="btn btn-primary" style="background-color: black; border-color: black;">Agregar al carrito</a>
             </div>
           </div>
+       </div>
+       <div class="cartTab">
+            <h1>Carrito</h1>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="./images/pasta.jpeg" alt="">
+                    </div>
+                    <div class="name">
+                        Pasta
+                    </div>
+                    <div class="precio">
+                        $1000
+                    </div>
+                    <div class="quantity">
+                        <span class="menos"> - </span>
+                        <span>0</span>
+                        <span class="mas"> + </span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="close">Cerrar</button>
+                <button class="checkOut">Comprar</button>
+            </div>
        </div>
     </main>
     <hr class="separador">
