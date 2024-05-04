@@ -11,7 +11,7 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body class="showCart">
-    <div class="carrito">
+    <div class="cart">
     <a class="boton-carrito" href=""><img src="./images/carrito.svg" class="img-carrito"></a> 
     <span>0</span>
     </div>
@@ -20,7 +20,7 @@
         <div class="navbar">
             <img src="./images/logonegro.svg" class="logo">
             <ul>
-                <li><a href="#container">Productos</a></li>
+                <li><a href="#listProduct">Productos</a></li>
                 <li><a href="#footer">Contacto</a></li>
                 <li><a href="#">Quienes Somos</a></li>
             </ul>
@@ -36,30 +36,32 @@
         <div class="titulo-productos" id="container">
         <h1>PRODUCTOS</h1>
     </div>
-       <div class="container">
-        <div class="card" style="width: 20rem;">
-            <img src="./images/pasta.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pasta Garofalo</h5>
-              <p class="card-text">$ 1000</p>
-              <a href="#" class="btn btn-primary" style="background-color: black; border-color: black;">Agregar al carrito</a>
-            </div>
-          </div>
-          <div class="card" style="width: 20rem;">
-            <img src="./images/guanciale.svg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Guanciale</h5>
-              <p class="card-text">$ 1000</p>
-              <a href="#" class="btn btn-primary" style="background-color: black; border-color: black;">Agregar al carrito</a>
-            </div>
-          </div>
-          <div class="card" style="width: 20rem;">
-            <img src="./images/pecorino.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pecorino Romano DOP</h5>
-              <p class="card-text">$ 1000</p>
-              <a href="#" class="btn btn-primary" style="background-color: black; border-color: black;">Agregar al carrito</a>
-            </div>
+       <div class="listProduct">
+        <div class="item">
+            <img src="./images/pasta.jpeg" alt="">
+            <h2>Pasta</h2>
+            <div class="price">$1000</div>
+            <button class="addCart">
+                Agregar al carrito
+            </button>
+        </div>
+        <div class="item">
+            <img src="./images/guanciale.svg" alt="">
+            <h2>Guanciale</h2>
+            <div class="price">$1000</div>
+            <button class="addCart">
+                Agregar al carrito
+            </button>
+        </div>
+        <div class="item">
+            <img src="./images/pecorino.jpeg" alt="">
+            <h2>Pecorino</h2>
+            <div class="price">$1000</div>
+            <button class="addCart">
+                Agregar al carrito
+            </button>
+        </div>
+            
           </div>
        </div>
        <div class="cartTab">
@@ -67,18 +69,18 @@
             <div class="listCart">
                 <div class="item">
                     <div class="image">
-                        <img src="./images/pasta.jpeg" alt="">
+                        <img src="" alt="">
                     </div>
                     <div class="name">
-                        Pasta
+                        
                     </div>
                     <div class="precio">
-                        $1000
+                        
                     </div>
                     <div class="quantity">
-                        <span class="menos"> - </span>
-                        <span>0</span>
-                        <span class="mas"> + </span>
+                        <span class="menos">  </span>
+                        <span></span>
+                        <span class="mas">  </span>
                     </div>
                 </div>
             </div>

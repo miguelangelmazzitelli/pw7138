@@ -3,18 +3,18 @@
         "id" : 1,
         "name": "Pasta",
         "price": 1000,
-        "image": "./images/pasta.jpeg"
+        "image": "./images/pasta.jpeg"    
     },
     {
         "id" : 2,
         "name": "Pecorino",
         "price": 1000,
-        "image": "./images/pecorino.jpeg"
+        "image": "./images/pecorino.jpeg"    
     },
     {
         "id" : 3,
         "name": "Guanciale",
         "price": 1000,
-        "image": "./images/guanciale.jpeg"
-    },
+        "image": "./images/guanciale.svg"    
+    }      
 ]
