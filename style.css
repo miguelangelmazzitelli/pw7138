@@ -93,12 +93,18 @@ body {
 }
 .listProduct{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
     gap: 20px;
 }
+
+.item button:hover {
+    opacity: 0.8;
+}
+
 .listProduct .item{
     background-color: #FCEC9A;
-    padding: 20px;
+    padding: 40px;
     border-radius: 20px;
 }
 .listProduct .item h2{
