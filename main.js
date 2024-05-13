@@ -78,9 +78,9 @@ const addCartToHTML = () => {
                 ${info.price * cart.quantity}
                 </div>
                 <div class="quantity">
-                    <span class="menos"> - </span>
+                    <span class="menos">-</span>
                     <span>${cart.quantity}</span>
-                    <span class="mas"> + </span>
+                    <span class="mas">+</span>
                 </div>
             `;
         listCartHTML.appendChild(newCart);
