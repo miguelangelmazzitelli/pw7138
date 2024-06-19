@@ -86,6 +86,7 @@ body {
     justify-content: center;
     gap: 100px;
     padding: 50px;
+    transition: transform .20s;
 }
 
 .listProduct .item img{
@@ -204,18 +205,17 @@ body {
 
 .cart {
     position: fixed;
-    top: 15px; 
+    top: 20px; 
     margin: auto;
     right: 20px; /* Ajusta la distancia desde el lado derecho */
     border-radius: 5px; /* Borde redondeado */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    z-index: 1000; /* Asegura que esté por encima del contenido */
 }
 
 .cart span{
     display: flex;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-color: black;
     justify-content: center;
     align-items: center;
@@ -223,7 +223,7 @@ body {
     border-radius: 50%;
     position: absolute;
     top: 55%;
-    left: -2px;
+    left: -6px;
 
 }
 
@@ -241,12 +241,13 @@ body {
     inset: 0 -400px 0 auto;
     display: grid;
     grid-template-rows: 70px 1fr 70px;  
-    transition: transform .5s;
+    transition: transform .20s;
 }
 
 body.showCart .cartTab{
     inset: 0 0 0 auto;
 }
+
 
 body.showCart .listProduct{
     transform: translateX(-250px);
@@ -296,5 +297,5 @@ body.showCart .listProduct{
 }
 
 .listCart .item:nth-child(even){
-    background-color: #FCEC9A; 
+    background-color: #E2A765;
 }

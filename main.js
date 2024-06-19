@@ -3,7 +3,7 @@ let closeCart = document.querySelector('.close');
 let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct')
 let listCartHTML = document.querySelector('.listCart');
-let iconCartSpan = document.querySelector('cart span')
+let iconCartSpan = document.querySelector('.cart span')
 
 let listProducts = [];
 let carts = [];
@@ -55,6 +55,11 @@ const addtoCart = (product_id) => {
         carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
     }
     addCartToHTML();
+    addCartToMemory();
+}
+
+const addCartToMemory = () => {
+    localStorage.setItem('cart', JSON.stringify(carts));
 }
 
 const addCartToHTML = () => {
@@ -65,6 +70,7 @@ const addCartToHTML = () => {
             totalQuantity = totalQuantity + cart.quantity;
             let newCart = document.createElement('div');
             newCart.classList.add('item');
+            newCart.dataset.id = cart.product_id;
             let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
             let info = listProducts[positionProduct];
             newCart.innerHTML = `
@@ -89,6 +95,40 @@ const addCartToHTML = () => {
     iconCartSpan.innerText = totalQuantity;
 }
 
+listCartHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if(positionClick.classList.contains('menos') || positionClick.classList.contains('mas')){
+        let product_id = positionClick.parentElement.parentElement.dataset.id;
+        let type = 'menos';
+        if(positionClick.classList.contains('mas')){
+            type = 'mas';
+        }
+        changeQuantityCart(product_id, type);
+    }
+})
+
+const changeQuantityCart = (product_id, type) => {
+    let positionItemInCart = carts.findIndex((value) => value.product_id == product_id);
+    if(positionItemInCart >= 0){
+        switch (type) {
+            case 'mas':
+                carts[positionItemInCart].quantity = carts[positionItemInCart].quantity + 1;
+                break;
+        
+            default:
+                let changeQuantity = carts[positionItemInCart].quantity - 1;
+                if (changeQuantity > 0) {
+                    carts[positionItemInCart].quantity = changeQuantity;
+                }else{
+                    carts.splice(positionItemInCart, 1);
+                }
+                break;
+        }
+    }
+    addCartToHTML();
+    addCartToMemory();
+}
+
 const initApp = () => {
 
     fetch('products.json')
@@ -96,6 +136,11 @@ const initApp = () => {
     .then(data => {
         listProducts = data;
         addDataToHTML();
-    })
+
+        if(localStorage.getItem('cart')){
+            carts = JSON.parse(localStorage.getItem('cart'));
+            addCartToHTML();
+        }
+    }) 
 }
 initApp(); 
