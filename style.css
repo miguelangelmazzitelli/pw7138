@@ -94,18 +94,18 @@ body {
 }
 .listProduct{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: auto auto auto;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 .item button:hover {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .listProduct .item{
-    background-color: #FCEC9A;
-    padding: 40px;
+    background-color: white;
+    padding: 10px;
     border-radius: 20px;
 }
 .listProduct .item h2{
@@ -113,7 +113,7 @@ body {
     font-size: large;
 }
 .listProduct .item .price{
-    letter-spacing: 7px;
+    letter-spacing: 5px;
     font-size: small;
 }
 .listProduct .item button{
@@ -122,7 +122,7 @@ body {
     border: none;
     padding: 5px 10px;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 .footer {
@@ -317,7 +317,8 @@ body.showCart .listProduct{
         inset: 0 -800px 0 ;
         display: grid;
         grid-template-rows: 70px 1fr 70px;  
-        transition: transform .20s;
+        transition: transform .30s;
+        z-index: 1000;
     }
     .cartTab .listCart .item {
         display: grid;
