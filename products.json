@@ -15,6 +15,6 @@
         "id" : 3,
         "name": "Guanciale",
         "price": 4800,
-        "image": "./images/guanciale.svg"    
+        "image": "./images/guanciale.png"    
     }      
 ]

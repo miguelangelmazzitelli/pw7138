@@ -9,7 +9,7 @@ let listProducts = [];
 let carts = [];
 
 iconCart.addEventListener('click', () => {
-    body.classList.toggle('showCart')
+    body.classList.toggle('showCart') 
 })
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
@@ -81,7 +81,7 @@ const addCartToHTML = () => {
                 ${info.name}
                 </div>
                 <div class="precio">
-                ${info.price * cart.quantity}
+                $${info.price * cart.quantity}
                 </div>
                 <div class="quantity">
                     <span class="menos">-</span>
