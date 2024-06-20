@@ -4,6 +4,7 @@ let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct')
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.cart span')
+let totalPriceElement = document.querySelector('.totalprice')
 
 let listProducts = [];
 let carts = [];
@@ -31,7 +32,8 @@ const addDataToHTML = () => {
             });
         }
     }
-listProductHTML.addEventListener('click', (event) => {
+
+    listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if(positionClick.classList.contains('addCart')){
         let product_id = positionClick.parentElement.dataset.id;
@@ -65,6 +67,7 @@ const addCartToMemory = () => {
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
+    let totalPrice = 0;
     if(carts.length > 0){
         carts.forEach (cart => {
             totalQuantity = totalQuantity + cart.quantity;
@@ -90,9 +93,13 @@ const addCartToHTML = () => {
                 </div>
             `;
         listCartHTML.appendChild(newCart);
+        totalPrice += info.price * cart.quantity;
         })
     }
     iconCartSpan.innerText = totalQuantity;
+    if (totalPriceElement) {
+        totalPriceElement.innerText = `Total: $${totalPrice.toFixed(0)}`;
+    }
 }
 
 listCartHTML.addEventListener('click', (event) => {

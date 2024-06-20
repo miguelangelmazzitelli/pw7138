@@ -258,6 +258,14 @@ body.showCart .listProduct{
     font-weight: 300;
 }
 
+.cartTab .totalprice {
+    display: grid;
+    padding: 10px;
+    text-align: right;
+    font-size: larger;
+    grid-template-columns: repeat(1, 1fr);
+}
+
 .cartTab .btn{
     display: grid;
     padding: 0;
